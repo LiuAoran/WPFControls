@@ -21,6 +21,8 @@ namespace DarkMode
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool isDarkMode = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +35,7 @@ namespace DarkMode
                 // 在UI线程上执行更改主题的操作
                 ThemeManager.SetTheme(false);
             });
+            isDarkMode = false;
         }
 
         private void DarkModeRadioButton_Checked(object sender, RoutedEventArgs e)
@@ -42,6 +45,23 @@ namespace DarkMode
                 // 在UI线程上执行更改主题的操作
                 ThemeManager.SetTheme(true);
             });
+            isDarkMode = true;
+        }
+
+        private void CheckThemeMod_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new Window();
+            CheckDarkModeControl checkDarkModeControl = new CheckDarkModeControl(isDarkMode);
+            window.Title = "Check";
+            window.Height = 200;
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen; 
+            window.Width = 400;
+            window.ResizeMode = ResizeMode.NoResize;
+            window.Content = checkDarkModeControl;
+            window.WindowStyle = WindowStyle.None;
+            window.Owner = this;
+            window.ShowInTaskbar = false;
+            window.ShowDialog();
         }
     }
 }
