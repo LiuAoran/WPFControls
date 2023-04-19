@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:DarkMode"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="HomePageGrid" Background="{StaticResource bg.normal.color}">
+    <Grid x:Name="HomePageGrid" Background="{DynamicResource bg.normal.color}">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <RadioButton x:Name="LightModeRadioButton" GroupName="ThemeMode" IsChecked="True" Checked="LightModeRadioButton_Checked">
-                <TextBlock Text="Light Mode"></TextBlock>
+                <TextBlock Text="Light Mode" Foreground="{DynamicResource bg.forge.color}"></TextBlock>
             </RadioButton>
             <RadioButton x:Name="DarkModeRadioButton" GroupName="ThemeMode" Checked="DarkModeRadioButton_Checked">
-                <TextBlock Text="Dark Mode"></TextBlock>
+                <TextBlock Text="Dark Mode"  Foreground="{DynamicResource bg.forge.color}"></TextBlock>
             </RadioButton>
+            <Button x:Name="CheckThemeMod" Background="{DynamicResource btn.normal.color}" Click="CheckThemeMod_Click">
+                <TextBlock Text="Check" Foreground="{DynamicResource btn.forge.color}"></TextBlock>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
