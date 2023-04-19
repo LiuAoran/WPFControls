@@ -14,6 +14,9 @@
             <RadioButton x:Name="DarkModeRadioButton" GroupName="ThemeMode" Checked="DarkModeRadioButton_Checked">
                 <TextBlock Text="Dark Mode"  Foreground="{DynamicResource bg.forge.color}"></TextBlock>
             </RadioButton>
+            <RadioButton x:Name="DefaultModeRadioButton" GroupName="ThemeMode" Checked="DefaultModeRadioButton_Checked">
+                <TextBlock Text="Default"  Foreground="{DynamicResource bg.forge.color}"></TextBlock>
+            </RadioButton>
             <Button x:Name="CheckThemeMod" Background="{DynamicResource btn.normal.color}" Click="CheckThemeMod_Click">
                 <TextBlock Text="Check" Foreground="{DynamicResource btn.forge.color}"></TextBlock>
             </Button>
