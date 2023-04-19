@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="DarkMode.CheckDarkModeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DarkMode"
+             mc:Ignorable="d" 
+            >
+    <Border CornerRadius="5" BorderThickness="2" BorderBrush="AliceBlue">
+        <Grid Height="200" Width=" 400" Background="{DynamicResource dlg.normal.color}" >
+            <TextBlock Text="{Binding ThemeStatusMsg}" VerticalAlignment="Center" Margin="30" Foreground="{DynamicResource btn.forge.color}"></TextBlock>
+            <Button Name="SureButton" Height="30" Width="60" Margin="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="{DynamicResource btn.normal.color}" Click="SureButton_Click">
+                <TextBlock Foreground="{DynamicResource btn.forge.color}" Text="Sure"></TextBlock>
+            </Button>
+        </Grid>
+    </Border>
+</UserControl>

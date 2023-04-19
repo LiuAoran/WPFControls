@@ -1,4 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <SolidColorBrush x:Key="bg.normal.color" Color="#333333"></SolidColorBrush>
+    <SolidColorBrush x:Key="bg.forge.color" Color="#CECECE"></SolidColorBrush>
+    <SolidColorBrush x:Key="btn.normal.color" Color="#666666"></SolidColorBrush>
+    <SolidColorBrush x:Key="btn.forge.color" Color="#DDDDDD"></SolidColorBrush>
+    <SolidColorBrush x:Key="dlg.normal.color" Color="#000000"></SolidColorBrush>
 </ResourceDictionary>
