@@ -1,0 +1,12 @@
+﻿<Application x:Class="TitleBar.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TitleBar"
+             xmlns:converter="clr-namespace:TitleBar.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <converter:WindowStateToThicknessConverter x:Key="windowStateToThicknessConverter"></converter:WindowStateToThicknessConverter>
+        <converter:CaptionHeightConverter x:Key="captionHeightConverter"></converter:CaptionHeightConverter>
+        <converter:WindowStateToPathConverter x:Key="windowStateToPathConverter"></converter:WindowStateToPathConverter>
+    </Application.Resources>
+</Application>
