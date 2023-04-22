@@ -9,6 +9,7 @@
         WindowStyle="None"
         Height="450" Width="800"
         MinWidth="300" MinHeight="150"
+        MaxWidth="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenWidthKey}}" MaxHeight="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenHeightKey}}"
         ResizeMode="CanResize"
         BorderThickness="{Binding RelativeSource={RelativeSource Mode=Self},Path=WindowState,Converter={StaticResource windowStateToThicknessConverter}}"
         x:Name="Window" Icon="/Assets/Resources/icon.png">
