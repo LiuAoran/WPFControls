@@ -10,6 +10,9 @@
     <Page Update="Assets\Styles\ButtonStyleDictionary.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Assets\Styles\WindowStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
