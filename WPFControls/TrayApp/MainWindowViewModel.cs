@@ -49,7 +49,7 @@ namespace TrayApp
         {
             LoadedCommand = new RelayCommand(Loaded);
             ClosingCommand = new RelayCommand<CancelEventArgs>(Closing);
-            NotifyCommand = new RelayCommand(()=>Notify("Hello World"));
+            NotifyCommand = new RelayCommand(()=>Notify("甜起来了！"));
             NotifyIconOpenCommand = new RelayCommand(()=>WindowState = WindowState.Normal);
             NotifyIconExitCommand = new RelayCommand(() => App.Current.Shutdown());
         }
@@ -58,9 +58,9 @@ namespace TrayApp
         {
             NotifyRequest = new NotifyIconWrapper.NotifyRequestRecord
             {
-                Title = "Notify",
+                Title = "辛苦了",
                 Text = message,
-                Duration = 1000
+                Duration = 100
             };
         }
 
