@@ -7,7 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="LimitedNumberBoxWithUnitControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="NumberBoxDropDownControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TextBoxWithUnitControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="LimitedNumberBoxWithUnitControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NumberBoxDropDownControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TextBoxWithUnitControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

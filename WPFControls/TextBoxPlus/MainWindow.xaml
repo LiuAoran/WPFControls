@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <local:TextBoxWithUnitControl Height="30" Width="100" Unit="%"></local:TextBoxWithUnitControl>
+        <local:LimitedNumberBoxWithUnitControl Height="30" Width=" 100" Unit="mm" Grid.Row="1" Maxium="300" Minimum="0"></local:LimitedNumberBoxWithUnitControl>
+        <local:NumberBoxDropDownControl Height="30" Width="100" Grid.Row="2" Unit="%" Maxium="300" Minimum="0"></local:NumberBoxDropDownControl>
     </Grid>
 </Window>
