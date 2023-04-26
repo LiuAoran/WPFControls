@@ -83,5 +83,11 @@ namespace TextBoxPlus
                 }
             }
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+            TextBox.Text = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content.ToString();
+        }
     }
 }

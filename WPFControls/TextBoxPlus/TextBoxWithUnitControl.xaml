@@ -11,7 +11,7 @@
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
         <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
 
-        <Style x:Key="TextBoxLightWatermarkWithUnit" TargetType="{x:Type TextBox}">
+        <Style x:Key="TextBoxWithUnit" TargetType="{x:Type TextBox}">
             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
             <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
@@ -65,6 +65,6 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <TextBox Style="{StaticResource TextBoxLightWatermarkWithUnit}"></TextBox>
+        <TextBox Style="{StaticResource TextBoxWithUnit}"></TextBox>
     </Grid>
 </UserControl>
