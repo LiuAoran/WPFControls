@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Reflection.Metadata" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Assets\Resources\icon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

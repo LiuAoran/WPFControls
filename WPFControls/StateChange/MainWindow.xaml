@@ -1,0 +1,57 @@
+﻿<Window x:Class="StateChange.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StateChange"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Width="150" Height="200">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border x:Name="StatusBorder" Background="LightGray" Margin="10">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="VisualStatus">
+                    <VisualStateGroup.Transitions>
+                        <VisualTransition From="Free" To="Busy" GeneratedDuration="0:0:0.3">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="StatusBorder" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
+                                    <DiscreteColorKeyFrame Value="Red" KeyTime="0:0:0"></DiscreteColorKeyFrame>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualTransition>
+                    </VisualStateGroup.Transitions>
+                    <VisualState x:Name="Busy">
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="StatusBorder" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
+                                <DiscreteColorKeyFrame Value="Pink" KeyTime="0:0:0"></DiscreteColorKeyFrame>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Free">
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="StatusBorder" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
+                                <DiscreteColorKeyFrame Value="LawnGreen" KeyTime="0:0:0"></DiscreteColorKeyFrame>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+
+                    <VisualState x:Name="Normal">
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="StatusBorder" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)">
+                                <DiscreteColorKeyFrame Value="LightBlue" KeyTime="0:0:0"></DiscreteColorKeyFrame>
+                            </ColorAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Border>
+        <RadioButton Content ="Busy" Grid.Row="1" Click="RadioButton_Click"></RadioButton>
+        <RadioButton Content="Free" Grid.Row="2" Click="RadioButton_Click"></RadioButton>
+        <RadioButton Content="Normal" Grid.Row="3" Click="RadioButton_Click"></RadioButton>
+    </Grid>
+</Window>
