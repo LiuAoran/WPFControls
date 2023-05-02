@@ -30,7 +30,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorPicker", "ColorPicker\ColorPicker.csproj", "{F5458AB3-3781-478D-89F5-1FF0ECCA4857}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slider", "Slider\Slider.csproj", "{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}"
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FadeInFadeOut", "FadeInFadeOut\FadeInFadeOut.csproj", "{87CC1643-9BEB-4AF9-8395-B5971FB120F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
