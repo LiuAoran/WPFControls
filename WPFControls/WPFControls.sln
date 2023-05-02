@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FadeInFadeOut", "FadeInFade
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorPicker", "ColorPicker\ColorPicker.csproj", "{F5458AB3-3781-478D-89F5-1FF0ECCA4857}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slider", "Slider\Slider.csproj", "{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{F5458AB3-3781-478D-89F5-1FF0ECCA4857}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5458AB3-3781-478D-89F5-1FF0ECCA4857}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5458AB3-3781-478D-89F5-1FF0ECCA4857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
