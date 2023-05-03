@@ -81,7 +81,7 @@
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     Background="{TemplateBinding Background}">
-                                <ContentPresenter x:Name="SelectedContent"
+                                <ContentPresenter ContentSource="SelectedContent"
                                                   SnapsToDevicePixels="True"
                                                   Margin="{TemplateBinding Padding}"></ContentPresenter>
                             </Border>
@@ -107,7 +107,7 @@
                 
                 <TabItem Header="Home1" Style="{DynamicResource TabItemStyle}">
                     <Grid>
-                        <TextBlock Text="Home1"
+                        <TextBlock Text="Home 1"
                                    Foreground="{DynamicResource SecundaryTextColor}"
                                    FontSize="20"
                                    HorizontalAlignment="Center"
@@ -118,7 +118,18 @@
 
                 <TabItem Header="Home2" Style="{DynamicResource TabItemStyle}">
                     <Grid>
-                        <TextBlock Text="Home2"
+                        <TextBlock Text="Home 2"
+                                   Foreground="{DynamicResource SecundaryTextColor}"
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center">
+                        </TextBlock>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Home3" Style="{DynamicResource TabItemStyle}">
+                    <Grid>
+                        <TextBlock Text="Home 3"
                                    Foreground="{DynamicResource SecundaryTextColor}"
                                    FontSize="20"
                                    HorizontalAlignment="Center"
