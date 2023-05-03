@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorPicker", "ColorPicker\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slider", "Slider\Slider.csproj", "{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabControl", "TabControl\TabControl.csproj", "{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

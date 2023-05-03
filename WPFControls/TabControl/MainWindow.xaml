@@ -1,0 +1,132 @@
+﻿<Window x:Class="TabControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TabControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="960" Width="1280"
+        FontFamily="Poppins">
+    <Window.Resources>
+        <!--Colors-->
+        <SolidColorBrush x:Key="PrimaryBlueColor" Color="#348EF6"></SolidColorBrush>
+        <SolidColorBrush x:Key="SecundaryBlueColor" Color="#EFF2FF"></SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryTextColor" Color="#FFFFFF"></SolidColorBrush>
+        <SolidColorBrush x:Key="SecundaryTextColor" Color="#BBC1D1"></SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryGrayColor" Color="#BBC1D1"></SolidColorBrush>
+
+        <Style x:Key="TabItemStyle" TargetType="{x:Type TabItem}">
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="Foreground" Value="{DynamicResource SecundaryTextColor}"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="BorderBrush" Value="Transparent"></Setter>
+            <Setter Property="Margin" Value="0 0 5 0" ></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="Padding" Value="12 8"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabItem">
+                        <Grid SnapsToDevicePixels="False">
+                            <Border CornerRadius="5"
+                                    Background="{TemplateBinding Background}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    Margin="{TemplateBinding Margin}"></Border>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              SnapsToDevicePixels="True"
+                                              RecognizesAccessKey="True"
+                                              Margin="{TemplateBinding Padding}"
+                                              ContentSource="Header"
+                                              Focusable="False"></ContentPresenter>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{DynamicResource SecundaryBlueColor}"></Setter>
+                                <Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="{DynamicResource PrimaryBlueColor}"></Setter>
+                                <Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
+            <Setter Property="Background" Value="{DynamicResource SecundaryBlueColor}"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="BorderBrush" Value="Transparent"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabControl">
+                        <Grid SnapsToDevicePixels="True">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TabPanel Grid.Row="0"
+                                      Background="Transparent"
+                                      IsItemsHost="True"></TabPanel>
+                            <Border Grid.Row="1" 
+                                    CornerRadius="5"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter x:Name="SelectedContent"
+                                                  SnapsToDevicePixels="True"
+                                                  Margin="{TemplateBinding Padding}"></ContentPresenter>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="{DynamicResource PrimaryBlueColor}">
+        <Border CornerRadius="10" Padding="30" Background="{DynamicResource PrimaryTextColor}" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TabControl Width="600" Height="450" Style="{DynamicResource TabControlStyle}">
+                <TabItem Header="Home" Style="{DynamicResource TabItemStyle}">
+                    <Grid>
+                        <TextBlock Text="Home"
+                                   Foreground="{DynamicResource SecundaryTextColor}"
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center">
+                        </TextBlock>
+                    </Grid>
+                </TabItem>
+                
+                <TabItem Header="Home1" Style="{DynamicResource TabItemStyle}">
+                    <Grid>
+                        <TextBlock Text="Home1"
+                                   Foreground="{DynamicResource SecundaryTextColor}"
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center">
+                        </TextBlock>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Home2" Style="{DynamicResource TabItemStyle}">
+                    <Grid>
+                        <TextBlock Text="Home2"
+                                   Foreground="{DynamicResource SecundaryTextColor}"
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center">
+                        </TextBlock>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Border>
+    </Grid>
+</Window>
