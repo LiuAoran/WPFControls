@@ -60,7 +60,7 @@
                                         <RowDefinition></RowDefinition>
                                         <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
-                                    <Button Style="{StaticResource ClearButton}">
+                                    <Button x:Name="UpButton" Style="{StaticResource ClearButton}" Click="UpButton_Click">
                                         <Button.Content>
                                             <Path Fill="#CDCDCD" Stroke="#000000" Grid.Column="1" Height="8" Width="15" Stretch="Fill">
                                                 <Path.Data>
@@ -69,7 +69,7 @@
                                             </Path>
                                         </Button.Content>
                                     </Button>
-                                    <Button  Style="{StaticResource ClearButton}" Grid.Row="1">
+                                    <Button x:Name="DownButton" Style="{StaticResource ClearButton}" Grid.Row="1" Click="DownButton_Click">
                                         <Button.Content>
                                             <Path Fill="#CDCDCD" Stroke="#000000" Grid.Column="1" Height="8" Width="15" Stretch="Fill">
                                                 <Path.Data>
@@ -88,6 +88,6 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <TextBox Style="{StaticResource NumericUpDown}"></TextBox>
+        <TextBox x:Name="TextBox" Text="{Binding Text}" Style="{StaticResource NumericUpDown}" InputMethod.IsInputMethodEnabled="False" PreviewTextInput="TextBox_PreviewTextInput" PreviewKeyDown="TextBox_PreviewKeyDown" TextChanged="TextBox_TextChanged"></TextBox>
     </Grid>
 </UserControl>
