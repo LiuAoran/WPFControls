@@ -31,7 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorPicker", "ColorPicker\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slider", "Slider\Slider.csproj", "{9DF229EB-5CFB-49BC-A44C-8410081BF4E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabControl", "TabControl\TabControl.csproj", "{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TabControl", "TabControl\TabControl.csproj", "{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MEF", "MEF", "{64E5A3CA-B72A-45E0-8EB2-B91BC72AC3AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MefExample", "MefExample\MefExample.csproj", "{BC3646EB-BE91-48D8-A5F2-B3C1B30EBDC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,9 +103,16 @@ Global
 		{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6D27B18-3B72-4751-AC2E-ABFE196F79AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3646EB-BE91-48D8-A5F2-B3C1B30EBDC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3646EB-BE91-48D8-A5F2-B3C1B30EBDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3646EB-BE91-48D8-A5F2-B3C1B30EBDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3646EB-BE91-48D8-A5F2-B3C1B30EBDC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC3646EB-BE91-48D8-A5F2-B3C1B30EBDC5} = {64E5A3CA-B72A-45E0-8EB2-B91BC72AC3AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5CC28B5-3C01-4E67-B39E-52D662893178}

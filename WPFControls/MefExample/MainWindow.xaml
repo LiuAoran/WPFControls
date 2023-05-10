@@ -1,0 +1,64 @@
+﻿<Window x:Class="MefExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MefExample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowViewModel></local:MainWindowViewModel>
+    </Window.DataContext>
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top" ItemsSource="{Binding PluginNameList}">
+            <Menu.ItemContainerStyle>
+                <Style TargetType="{x:Type MenuItem}">
+                    <Setter Property="Header" Value="{Binding Path=Name}" />
+                    <Setter Property="Command" Value="{Binding Command}" />
+                </Style>
+            </Menu.ItemContainerStyle>
+        </Menu>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="Plugins List"></Label>
+            <Border BorderThickness="1" BorderBrush="#666666" Grid.Row="1">
+                <ListBox 
+                Margin="5" 
+                ItemsSource="{Binding PlugingNameList}"
+                SelectedItem="{Binding SelectedPlugin}">
+                    <ListBox.InputBindings>
+                        <MouseBinding Command="{Binding LoadPluginCommand}" MouseAction="LeftClick"></MouseBinding>
+                    </ListBox.InputBindings>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ContentPresenter 
+                            Content="{Binding}">
+                                <ContentPresenter.InputBindings>
+                                    <MouseBinding Command="{Binding LoadLoadPluginCommand}" Gesture="LeftClick"></MouseBinding>
+                                </ContentPresenter.InputBindings>
+                            </ContentPresenter>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+            <Label Grid.Row="0" Grid.Column="1" Content="Content"></Label>
+            <Border BorderThickness="1" BorderBrush="#666666" Grid.Row="1" Grid.Column="1">
+                <ContentControl Content="{Binding Plugin}" />
+            </Border>
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="3"
+                Command="{Binding LoadPluginCommand}"
+                Content="Load" />
+        </Grid>
+    </DockPanel>
+</Window>
