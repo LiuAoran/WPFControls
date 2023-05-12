@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="DragablzExample.HeaderWithCloseControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style TargetType="{x:Type Thumb}" x:Key="InvisibleThumbStyle">
+                <Setter Property="Background" Value="Transparent"></Setter>
+                 <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Background="{TemplateBinding Background}"></Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                 </Setter>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel Orientation="Horizontal">
+        <Grid>
+            <TextBlock Text="{Binding Header}"></TextBlock>
+            <Thumb Style="{DynamicResource InvisibleThumbStyle}" ></Thumb>
+        </Grid>
+    </StackPanel>
+</UserControl>
