@@ -16,8 +16,4 @@
     <ProjectReference Include="..\MefExample.Core\MefExample.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Plugins\" />
-  </ItemGroup>
-
 </Project>

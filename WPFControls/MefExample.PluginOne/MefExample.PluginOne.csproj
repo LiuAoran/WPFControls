@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y &quot;$(TargetPath)&quot; &quot;$(SolutionDir)MefExample.Main\Plugins&quot;" />
+    <Exec Command="xcopy /y $(TargetPath) $(SolutionDir)MefExample.Main\$(OutDir)Plugins\" />
   </Target>
 
 </Project>
