@@ -20,9 +20,29 @@ namespace Slider
     /// </summary>
     public partial class TickSlideControl : UserControl
     {
+        // The dependency property which will be accessible on the UserControl
+        public static readonly DependencyProperty SliderWidthProperty =
+            DependencyProperty.Register("SliderWidth", typeof(double), typeof(TickSlideControl), new UIPropertyMetadata());
+
+        public double SliderWidth
+        {
+            get { return (double)GetValue(SliderWidthProperty); }
+            set { SetValue(SliderWidthProperty, value); }
+        }
+
+        // The dependency property which will be accessible on the UserControl
+        public static readonly DependencyProperty MaxiumProperty =
+            DependencyProperty.Register("Maxium", typeof(int), typeof(TickSlideControl), new UIPropertyMetadata());
+
+        public int Maxium
+        {
+            get { return (int)GetValue(MaxiumProperty); }
+            set { SetValue(MaxiumProperty, value); }
+        }
         public TickSlideControl()
         {
             InitializeComponent();
+            this.DataContext= this;
         }
     }
 }
