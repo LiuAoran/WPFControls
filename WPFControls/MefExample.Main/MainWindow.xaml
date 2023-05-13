@@ -7,6 +7,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Border BorderBrush="#353535" BorderThickness="1">
+                <StackPanel>
+                    <Button x:Name="PluginFirst" Content="First" Width="100" Height="30" Click="PluginFirst_Click"></Button>
+                    <Button x:Name="PluginSecond" Content="Second" Width="100" Height="30" Click="PluginSecond_Click"></Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Background="#EFEFEF">
+            <Label Content="Default" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <ContentControl Content="{Binding PluginView}"></ContentControl>
+        </Grid>
+        
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Border BorderBrush="#DCDCDC" BorderThickness="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Plugin Msg"></TextBlock>
+                    <TextBox Width="200" Text="{Binding PluginMsg}" TextWrapping="Wrap" IsReadOnly="True"></TextBox>
+                </StackPanel>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
