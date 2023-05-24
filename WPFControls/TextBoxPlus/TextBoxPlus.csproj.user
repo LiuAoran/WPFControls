@@ -13,6 +13,9 @@
     <Compile Update="NumberBoxDropDownControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PageTurningControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="TextBoxWithUnitControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,6 +28,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="NumberBoxDropDownControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PageTurningControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TextBoxWithUnitControl.xaml">

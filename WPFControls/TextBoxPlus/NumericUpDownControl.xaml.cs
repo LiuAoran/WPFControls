@@ -21,7 +21,7 @@ namespace TextBoxPlus
     /// </summary>
     public partial class NumericUpDownControl : UserControl
     {
-        private string regixString = "[^0-9]+";
+        private string regexString = "[^0-9]+";
 
         // The dependency property which will be accessible on the UserControl
         public static readonly DependencyProperty UnitProperty =
@@ -56,7 +56,7 @@ namespace TextBoxPlus
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            e.Handled = new Regex(regixString).IsMatch(e.Text);
+            e.Handled = new Regex(regexString).IsMatch(e.Text);
         }
 
         private void TextBox_PreviewKeyDown(object sender, KeyEventArgs e)
