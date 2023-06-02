@@ -61,7 +61,7 @@ namespace TextBoxPlus
 
         private void TextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyStates == Keyboard.GetKeyStates(Key.LeftCtrl) || e.KeyStates == Keyboard.GetKeyStates(Key.RightCtrl)) && e.KeyStates == Keyboard.GetKeyStates(Key.V))
+            if ((e.KeyStates == Keyboard.GetKeyStates(Key.LeftCtrl) || e.KeyStates == Keyboard.GetKeyStates(Key.RightCtrl)) && e.KeyStates == Keyboard.GetKeyStates(Key.V)|| e.KeyStates == Keyboard.GetKeyStates(Key.Space))
                 e.Handled = true;
             else
                 e.Handled = false;

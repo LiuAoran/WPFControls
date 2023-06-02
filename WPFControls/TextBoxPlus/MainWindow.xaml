@@ -22,6 +22,6 @@
         <local:LimitedNumberBoxWithUnitControl Height="30" Width=" 100" Unit="mm" Grid.Row="1" Maxium="300" Minimum="0"></local:LimitedNumberBoxWithUnitControl>
         <local:NumberBoxDropDownControl Height="30" Width="100" Grid.Row="2" Unit="%" Maxium="300" Minimum="0"></local:NumberBoxDropDownControl>
         <local:NumericUpDownControl Height="30" Width="100" Grid.Column="1" Grid.Row="1" Unit="mm" Maxium="16" Minimum="0"></local:NumericUpDownControl>
-        <local:PageTurningControl Height="36" Width="auto" Grid.Column="2"></local:PageTurningControl>
+        <local:PageTurningControl Height="36" Width="auto" Grid.Column="2" Minimum="1" Maxium="100"></local:PageTurningControl>
     </Grid>
 </Window>
