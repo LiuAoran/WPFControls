@@ -5,93 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ComboBoxPlus"
              mc:Ignorable="d" 
-             d:DesignHeight="24" d:DesignWidth="150">
-    <UserControl.Resources>
-        <Style x:Key="WritableSelectionComboBoxStyle" TargetType="{x:Type TextBox}">
-            <Setter Property="Background"  Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
-            <Setter Property="BorderBrush" Value="#FFABADB3"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
-            <Setter Property="HorizontalContentAlignment" Value="Left"/>
-            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-            <Setter Property="AllowDrop" Value="True"/>
-            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
-            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TextBox}">
-                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                            <Grid >
-                                <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
-                                <TextBlock x:Name="WARKTEXT" Text="{TemplateBinding Tag}" Foreground="#7F2F2F2F" Visibility="Collapsed" Padding="8,6,0,0"/>
-                            </Grid>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="BorderBrush" TargetName="border" Value="#FF7EB4EA"/>
-                            </Trigger>
-                            <Trigger Property="IsKeyboardFocused" Value="True">
-                                <Setter Property="BorderBrush" TargetName="border" Value="#FF569DE5"/>
-                            </Trigger>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="Text" Value=""/>
-                                    <!--<Condition Property="IsFocused" Value="False"/>-->
-                                </MultiTrigger.Conditions>
-                                <Setter Property="Visibility" TargetName="WARKTEXT" Value="Visible"/>
-                            </MultiTrigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <MultiTrigger>
-                    <MultiTrigger.Conditions>
-                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="True"/>
-                        <Condition Property="IsSelectionActive" Value="False"/>
-                    </MultiTrigger.Conditions>
-                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
-                </MultiTrigger>
-            </Style.Triggers>
-        </Style>
-    </UserControl.Resources>
-    <Grid>
-        <ComboBox Name="WritableSelectionComboBox"
-                  MinWidth="58"
-                  MinHeight="24"
-                  VerticalContentAlignment="Center"
-                  SelectedIndex="0"
-                  SelectionChanged="WritableSelectionComboBox_SelectionChanged"
-                  Visibility="Visible">
-            <ComboBoxItem x:Name="AllPageItem" Tag="AllPage"/>
-            <ComboBoxItem x:Name="OddPageItem" Tag="OddPage"/>
-            <ComboBoxItem x:Name="EvenPageItem" Tag="EvenPage"/>
-            <ComboBoxItem x:Name="CustomPageItem" Tag="CustomPage"/>
-        </ComboBox>
-
-        <TextBox
-            x:Name="WritableSelectionTextBox"
-            Grid.Column="0"
-            MinHeight="{Binding ElementName=writableComboBox, Path=MinHeight}"
-            BorderBrush="{x:Null}"
-            BorderThickness="0"
-            Margin="2"
-            HorizontalAlignment="Left"
+             d:DesignHeight="24"
+             d:DesignWidth="200">
+    <Grid MinHeight="24" MinWidth="60">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox 
+            x:Name="ComboBox"
+            MinHeight="24" 
+            MinWidth="60" 
             VerticalContentAlignment="Center"
-            Panel.ZIndex="1"
-            LostFocus="WritableSelectionTextBox_LostFocus"
-            PreviewKeyDown="WritableSelectionTextBox_PreviewKeyDown"
-            InputMethod.IsInputMethodEnabled="False"
-            PreviewTextInput="WritableSelectionTextBox_PreviewTextInput"
-            TextChanged="WritableSelectionTextBox_TextChanged"
-            Visibility="Hidden" Style="{StaticResource WritableSelectionComboBoxStyle}" Tag="例如1,3-5,10">
-            <!--<TextBox.CaretBrush>
-                <SolidColorBrush Color="#FF7EB4EA"/>
-            </TextBox.CaretBrush>-->
-        </TextBox>
+            Grid.ColumnSpan="2" 
+            SelectedIndex="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:WritableSelectionComboBoxControl}, Path=SelectedIndex}"
+            SelectionChanged ="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Selection A"></ComboBoxItem>
+            <ComboBoxItem Content="Selection B"></ComboBoxItem>
+            <ComboBoxItem Content="Selection C"></ComboBoxItem>
+            <ComboBoxItem Content="Writable Selection"></ComboBoxItem>
+        </ComboBox>
+        <TextBox
+                 x:Name="TextBox"
+                 MinHeight="{Binding ElementName=ComboBox, Path=MinHeight}"
+                 BorderBrush="{x:Null}"
+                 BorderThickness="0"
+                 VerticalContentAlignment="Center"
+                 Panel.ZIndex="1"
+                 Margin="1"
+                 Visibility="Hidden"></TextBox>
     </Grid>
 </UserControl>

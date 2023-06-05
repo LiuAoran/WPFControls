@@ -17,7 +17,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <local:WritableSelectionComboBoxControl Height="30" Width="200"></local:WritableSelectionComboBoxControl>
+        <local:WritableSelectionComboBoxControl Height="24" Width="200"></local:WritableSelectionComboBoxControl>
     </Grid>
     
 </Window>
