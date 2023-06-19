@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TextBoxPlus
+namespace NumberBoxPlus
 {
     /// <summary>
     /// NumberBoxDropDownControl.xaml 的交互逻辑
@@ -86,8 +86,11 @@ namespace TextBoxPlus
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-            TextBox.Text = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content.ToString();
+            if (ComboBox.SelectedIndex != -1)
+            {
+                TextBox.Text = ((sender as ComboBox)?.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? string.Empty;
+                ComboBox.SelectedIndex = -1;
+            } 
         }
     }
 }

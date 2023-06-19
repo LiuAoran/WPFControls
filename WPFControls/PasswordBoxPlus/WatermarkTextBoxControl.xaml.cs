@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NumberBoxPlus
+namespace PasswordBoxPlus
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// WatermarkTextBoxControl.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WatermarkTextBoxControl : UserControl
     {
-        public MainWindow()
+        public WatermarkTextBoxControl()
         {
             InitializeComponent();
         }

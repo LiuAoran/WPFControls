@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateChange", "StateChange\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrayApp", "TrayApp\TrayApp.csproj", "{D9F6B123-4D21-49AF-B826-DC0EB627167A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextBoxPlus", "TextBoxPlus\TextBoxPlus.csproj", "{7114B0F8-CD14-415A-9B69-8C52B24367E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberBoxPlus", "TextBoxPlus\NumberBoxPlus.csproj", "{7114B0F8-CD14-415A-9B69-8C52B24367E1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboBoxPlus", "ComboBoxPlus\ComboBoxPlus.csproj", "{42B7027A-5526-4D22-8452-D7F15E50FA6F}"
 EndProject
@@ -43,7 +43,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MefExample.PluginTwo", "Mef
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MefExample.Core", "MefExample.Core\MefExample.Core.csproj", "{8FC9C76E-3D93-47FD-AF3E-552624B28CF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragablzExample", "DragablzExample\DragablzExample.csproj", "{42CE4834-A2AD-4829-84EB-60593D75DD1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragablzExample", "DragablzExample\DragablzExample.csproj", "{42CE4834-A2AD-4829-84EB-60593D75DD1D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordBoxPlus", "PasswordBox\PasswordBoxPlus.csproj", "{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ButtonPlus", "ButtonPlus\ButtonPlus.csproj", "{55454C18-2CA3-4B39-99BC-037A69F1C3A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +135,14 @@ Global
 		{42CE4834-A2AD-4829-84EB-60593D75DD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42CE4834-A2AD-4829-84EB-60593D75DD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42CE4834-A2AD-4829-84EB-60593D75DD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55454C18-2CA3-4B39-99BC-037A69F1C3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55454C18-2CA3-4B39-99BC-037A69F1C3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55454C18-2CA3-4B39-99BC-037A69F1C3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55454C18-2CA3-4B39-99BC-037A69F1C3A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

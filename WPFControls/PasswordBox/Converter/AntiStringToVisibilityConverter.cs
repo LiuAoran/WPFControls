@@ -4,26 +4,24 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Data;
+using System.Windows;
 
-namespace TitleBar.Converters
+namespace PasswordBoxPlus.Converter
 {
-    [ValueConversion(typeof(WindowState), typeof(Thickness))]
-    class WindowStateToThicknessConverter : IValueConverter
+    [ValueConversion(typeof(string), typeof(Visibility))]
+    class AntiStringToVisibilityConverter : IValueConverter
     {
-
+        #region IValueConverter Members
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var ws = (WindowState)value;
-            if (ws == WindowState.Maximized)
+            if ((value as string) != string.Empty)
             {
-                return new Thickness(6);
+                return Visibility.Visible;
             }
             else
             {
-                // left, right and bottom borders are still drawn by the system
-                return new Thickness(0, 1, 0, 0);
+                return Visibility.Collapsed;
             }
         }
 
@@ -31,5 +29,6 @@ namespace TitleBar.Converters
         {
             return null;
         }
+        #endregion
     }
 }
