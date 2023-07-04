@@ -8,14 +8,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <ResourceDictionary>
-            <DataTemplate DataType="{x:Type dragablz:HeaderedItemViewModel}">
-                <ContentControl Content="{Binding Content}" Margin="4" FontSize="14"></ContentControl>
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type local:HeaderWithCloseControlViewModel}">
-                <local:HeaderWithCloseControl></local:HeaderWithCloseControl>
-            </DataTemplate>
-        </ResourceDictionary>
+        <ControlTemplate x:Key="CloseBtn" TargetType="{x:Static ButtonBase}">
+            <Border BorderThickness="{TemplateBinding Border.BorderThickness}"
+                    BorderBrush="{TemplateBinding Border.BorderBrush}"
+                    Background="{TemplateBinding Border.Background}"
+                    Name="border" 
+                    SnapsToDevicePixels="True">
+                <Path Name="content" VerticalAlignment="Center" HorizontalAlignment="Center" Fill="#606060" Data="M 13,11 22,20 M 13,20 22,11"></Path>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="True">
+                    <Setter Property="Path.Fill" TargetName="content" Value="#666666"></Setter>
+                </Trigger>
+                <Trigger Property="UIElement.IsMouseOver" Value="True">
+                    <Setter Property="Path.Fill" TargetName="content" Value="#555555"></Setter>
+                </Trigger>
+                <Trigger Property="ButtonBase.IsPressed" Value="True">
+                    <Setter Property="Path.Fill" Value="#333333"></Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
     </Window.Resources>
     <Grid>
         <dragablz:TabablzControl>
