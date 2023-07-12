@@ -14,7 +14,6 @@ namespace Settings.Demo
     }
 
     public class MultiDataList: List<MultiData>
-    {
-
+    { 
     }
 }
