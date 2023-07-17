@@ -8,13 +8,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <ControlTemplate x:Key="CloseBtn" TargetType="{x:Static ButtonBase}">
+        <ControlTemplate x:Key="CloseBtn" TargetType="{x:Type ButtonBase}">
             <Border BorderThickness="{TemplateBinding Border.BorderThickness}"
                     BorderBrush="{TemplateBinding Border.BorderBrush}"
                     Background="{TemplateBinding Border.Background}"
                     Name="border" 
                     SnapsToDevicePixels="True">
-                <Path Name="content" VerticalAlignment="Center" HorizontalAlignment="Center" Fill="#606060" Data="M 13,11 22,20 M 13,20 22,11"></Path>
+                <Path Name="content" VerticalAlignment="Center" HorizontalAlignment="Center" Fill="#606060" Data="M 3,3 17,17 M 3,17 17,3"></Path>
             </Border>
             <ControlTemplate.Triggers>
                 <Trigger Property="Button.IsDefaulted" Value="True">
@@ -28,10 +28,19 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
+
+        <ControlTemplate x:Key="AddButton" TargetType="{x:Type ButtonBase}">
+            <Border 
+                BorderThickness="{TemplateBinding Border.BorderThickness}"
+                BorderBrush="{TemplateBinding Border.BorderBrush}"
+                Background="{TemplateBinding Panel.Background}"
+                x:Name="border"
+                SnapsToDevicePixels="True">
+                <Path x:Name="content" VerticalAlignment="Center" HorizontalAlignment="Center" Fill="#FFFFFF" Data="M 2,8 16,8 M 8,2 8,16">
+                </Path>
+            </Border>
+        </ControlTemplate>
     </Window.Resources>
     <Grid>
-        <dragablz:TabablzControl>
-            
-        </dragablz:TabablzControl>
     </Grid>
 </Window>
