@@ -71,7 +71,7 @@
     </Style>
 
 
-    <Style x:Key="RC.JoyButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundCornerButtonBaseStyle}">
+    <Style x:Key="RC.WarningButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundCornerButtonBaseStyle}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -193,4 +193,63 @@
         </Setter>
     </Style>
 
+    <Style x:Key="RC.DefaultButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundCornerButtonBaseStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                        Background="#131824"
+                        BorderThickness="0"
+                        CornerRadius="{Binding ElementName=border, Path=ActualHeight, Converter={StaticResource HeightToCornerRadiusConverter}}"
+                        SnapsToDevicePixels="True"
+                        Height="{TemplateBinding Height}"
+                        Width="{TemplateBinding Width}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      TextBlock.FontSize="14"
+                                      TextBlock.Foreground="White"
+                                      Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#434366" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#36354d" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="RC.JoyButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundCornerButtonBaseStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                        Background="#eb261a"
+                        BorderThickness="0"
+                        CornerRadius="{Binding ElementName=border, Path=ActualHeight, Converter={StaticResource HeightToCornerRadiusConverter}}"
+                        SnapsToDevicePixels="True"
+                        Height="{TemplateBinding Height}"
+                        Width="{TemplateBinding Width}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      TextBlock.FontSize="14"
+                                      TextBlock.Foreground="White"
+                                      Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#434366" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#36354d" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

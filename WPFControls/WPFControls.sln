@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordBoxPlus", "Password
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ButtonPlus", "ButtonPlus\ButtonPlus.csproj", "{55454C18-2CA3-4B39-99BC-037A69F1C3A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Settings.Demo", "Settings.Demo\Settings.Demo.csproj", "{C5AD97D2-093C-4645-A746-2519C5FFF865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Settings.Demo", "Settings.Demo\Settings.Demo.csproj", "{C5AD97D2-093C-4645-A746-2519C5FFF865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shortcut", "Shortcut\Shortcut.csproj", "{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +151,10 @@ Global
 		{C5AD97D2-093C-4645-A746-2519C5FFF865}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5AD97D2-093C-4645-A746-2519C5FFF865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5AD97D2-093C-4645-A746-2519C5FFF865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
