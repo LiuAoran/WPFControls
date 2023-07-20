@@ -2,12 +2,18 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Shortcut"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <ResourceDictionary>
+            <RoutedUICommand x:Key="Command1" Text="Command1"/>
+            <RoutedUICommand x:Key="Command2" Text="Command2"/>
+            <RoutedUICommand x:Key="Command3" Text="Command3"/>
+            <RoutedUICommand x:Key="Command4" Text="Command4"/>
+            <RoutedUICommand x:Key="Command5" Text="Command5"/>
+            <RoutedUICommand x:Key="Command6" Text="Command6"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/ButtonPlus;component/ButtonStyle.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
@@ -26,7 +32,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
         <StackPanel>
-            
+
             <Border Background="AliceBlue" Height="30" Width="100"></Border> 
         </StackPanel>
         <Button Style="{StaticResource RC.SuccessButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="0" Content="Ctrl+C"></Button>

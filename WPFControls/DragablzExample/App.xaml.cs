@@ -13,5 +13,6 @@ namespace DragablzExample
     /// </summary>
     public partial class App : Application
     {
+        public static List<string> OpenedPageList = new List<string>();
     }
 }
