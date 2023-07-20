@@ -24,7 +24,11 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions> 
+            </Grid.ColumnDefinitions>
+        <StackPanel>
+            
+            <Border Background="AliceBlue" Height="30" Width="100"></Border> 
+        </StackPanel>
         <Button Style="{StaticResource RC.SuccessButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="0" Content="Ctrl+C"></Button>
         <Button Style="{StaticResource RC.PassButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="1" Content="Ctrl+V"></Button>
         <Button Style="{StaticResource RC.JoyButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="2" Content="F4"></Button>
