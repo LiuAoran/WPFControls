@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:Shortcut"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowViewModel></local:MainWindowViewModel>
+    </Window.DataContext>
     <Window.Resources>
         <ResourceDictionary>
             <RoutedUICommand x:Key="Command1" Text="Command1"/>
@@ -24,24 +27,25 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
-        </Grid.RowDefinitions> 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-        <StackPanel>
-
-            <Border Background="AliceBlue" Height="30" Width="100"></Border> 
-        </StackPanel>
-        <Button Style="{StaticResource RC.SuccessButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="0" Content="Ctrl+C"></Button>
-        <Button Style="{StaticResource RC.PassButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="1" Content="Ctrl+V"></Button>
-        <Button Style="{StaticResource RC.JoyButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="2" Content="F4"></Button>
-        <Button Style="{StaticResource RC.WarningButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="3" Content="Ctrl+Shift+F4"></Button>
-        <Button Style="{StaticResource RC.UnknowButtonStyle}" Margin="20"  Grid.Row="2" Grid.Column="0" Content="Ctrl+K Ctrl+V"></Button>
-        <Button Style="{StaticResource RC.DefaultButtonStyle}" Margin="20"  Grid.Row="2" Grid.Column="1"  Content="Ctrl+K 1"></Button>
-        <Button Style="{StaticResource RC.CommonButtonStyle}" Margin="20"  Grid.Row="2" Grid.Column="2" Content="Ctrl+K 2"></Button>
-        <Button Style="{StaticResource RC.DangerButtonStyle}" Margin="20"  Grid.Row="2" Grid.Column="3" Content="Ctrl+K 3"></Button>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1" Grid.ColumnSpan="2" Height="50" Width="200">
+            <Border BorderBrush="Black" BorderThickness="1">
+                <Grid Background="{Binding BackgroundColor}"></Grid>
+            </Border>
+        </Grid>
+        <Button Style="{StaticResource RC.SuccessButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="0" Content="Ctrl+C" Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Success"></Button>
+        <Button Style="{StaticResource RC.PassButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="1" Content="Ctrl+V" Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Pass"></Button>
+        <Button Style="{StaticResource RC.JoyButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="2" Content="F4"  Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Joy"></Button>
+        <Button Style="{StaticResource RC.WarningButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="3" Content="Ctrl+Shift+F4" Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Warning"></Button>
+        <Button Style="{StaticResource RC.UnknowButtonStyle}" Margin="20"  Grid.Row="2" Grid.Column="0" Content="Ctrl+K Ctrl+V" Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Unknow"></Button>
+        <Button Style="{StaticResource RC.DefaultButtonStyle}" Margin="20"  Grid.Row="2" Grid.Column="1"  Content="Ctrl+K 1" Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Default"></Button>
+        <Button Style="{StaticResource RC.CommonButtonStyle}" Margin="20"  Grid.Row="2" Grid.Column="2" Content="Ctrl+K 2" Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Common"></Button>
+        <Button Style="{StaticResource RC.DangerButtonStyle}" Margin="20"  Grid.Row="2" Grid.Column="3" Content="Ctrl+K 3" Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Danger"></Button>
     </Grid>
 </Window>
