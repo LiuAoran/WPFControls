@@ -4,24 +4,29 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Data;
 using System.Windows;
+using System.Windows.Data;
 
-namespace ButtonPlus
+namespace Shortcut
 {
-    class HeightToCornerRadiusConverter : IValueConverter
+    
+    internal class BoolToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            double height = (double)value;
-            double cornerRadius = height / 2;
-
-            return new CornerRadius(cornerRadius, cornerRadius, cornerRadius, cornerRadius);
+            if ((bool)value == true)
+            {
+                return Visibility.Visible;
+            }
+            else
+            {
+                return Visibility.Hidden;
+            }
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotSupportedException();
+            throw new NotImplementedException();
         }
     }
 }

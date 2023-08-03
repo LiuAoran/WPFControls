@@ -23,6 +23,6 @@ namespace Shortcut
         public MainWindow()
         {
             InitializeComponent();
-        }
+        } 
     }
 }

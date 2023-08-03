@@ -12,8 +12,15 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace Shortcut
 {
-    internal class MainWindowViewModel:ObservableObject
+    internal class MainWindowViewModel : ObservableObject
     {
+        private bool _isKMod = false;
+        public bool IsKMod
+        {
+            get => _isKMod;
+            set => SetProperty(ref _isKMod, value);
+        }
+
         private SolidColorBrush _backgroundColor = new();
         public SolidColorBrush BackgroundColor
         {
@@ -34,13 +41,44 @@ namespace Shortcut
         };
 
         public ICommand SetColorCommand { get; }
+        public ICommand KModCommand { get; }
+        public ICommand KModSetColorCommand { get; }
+
+        private readonly KeyboardHook keyboardHook = new KeyboardHook();
 
         public MainWindowViewModel()
         {
-            SetColorCommand = new RelayCommand<string>((e) => 
+            SetColorCommand = new RelayCommand<string>((e) =>
             {
-                BackgroundColor = keyValuePairs[e] ?? new SolidColorBrush(Colors.White); 
+                if (!IsKMod)
+                {
+                    BackgroundColor = (e != null) ? keyValuePairs[e] : new SolidColorBrush(Colors.White);
+                }
             });
+
+            KModCommand = new RelayCommand(() =>
+            {
+                IsKMod = true;
+                keyboardHook.KeyPressed += OnKeyPressed;
+            });
+
+            KModSetColorCommand = new RelayCommand<string>((e) =>
+            {
+                if (IsKMod)
+                {
+                    BackgroundColor = (e != null) ? keyValuePairs[e] : new SolidColorBrush(Colors.White);
+                    IsKMod = false;
+                }
+            });
+        }
+
+        private void OnKeyPressed(object sender, KeyPressedEventArgs e)
+        {
+            if (IsKMod)
+            {
+                IsKMod = !IsKMod;
+                keyboardHook.KeyPressed -= OnKeyPressed;
+            } 
         }
     }
 }

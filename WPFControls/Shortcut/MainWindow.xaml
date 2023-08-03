@@ -11,17 +11,32 @@
     </Window.DataContext>
     <Window.Resources>
         <ResourceDictionary>
-            <RoutedUICommand x:Key="Command1" Text="Command1"/>
-            <RoutedUICommand x:Key="Command2" Text="Command2"/>
-            <RoutedUICommand x:Key="Command3" Text="Command3"/>
-            <RoutedUICommand x:Key="Command4" Text="Command4"/>
-            <RoutedUICommand x:Key="Command5" Text="Command5"/>
-            <RoutedUICommand x:Key="Command6" Text="Command6"/>
+            <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"></local:BoolToVisibilityConverter>
+            <RoutedUICommand x:Key="Success"/>
+            <RoutedUICommand x:Key="Pass"/>
+            <RoutedUICommand x:Key="Joy"/>
+            <RoutedUICommand x:Key="Warning"/>
+            <RoutedUICommand x:Key="Unknow"/>
+            <RoutedUICommand x:Key="Default"/>
+            <RoutedUICommand x:Key="Common"/>
+            <RoutedUICommand x:Key="Danger"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/ButtonPlus;component/ButtonStyle.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="C" Modifiers="Ctrl" Command="{Binding SetColorCommand}" CommandParameter="Success"></KeyBinding>
+        <KeyBinding Key="V" Modifiers="Ctrl" Command="{Binding SetColorCommand}" CommandParameter="Pass"></KeyBinding>
+        <KeyBinding Key="F4" Modifiers="Ctrl" Command="{Binding SetColorCommand}" CommandParameter="Joy"></KeyBinding>
+        <KeyBinding Key="F4" Modifiers="Ctrl+Shift" Command="{Binding SetColorCommand}" CommandParameter="Warning"></KeyBinding>
+        <KeyBinding Key="k" Modifiers="Ctrl" Command="{Binding KModCommand}"></KeyBinding>
+        <KeyBinding Key="V" Modifiers="Ctrl" Command="{Binding KModSetColorCommand}" CommandParameter="Unknow"></KeyBinding>
+        <KeyBinding Key="A" Command="{Binding KModSetColorCommand}" CommandParameter="Default"></KeyBinding>
+        <KeyBinding Key="B" Command="{Binding KModSetColorCommand}" CommandParameter="Common"></KeyBinding>
+        <KeyBinding Key="C" Command="{Binding KModSetColorCommand}" CommandParameter="Danger"></KeyBinding>
+
+    </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -34,10 +49,14 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="1" Grid.ColumnSpan="2" Height="50" Width="200">
-            <Border BorderBrush="Black" BorderThickness="1">
-                <Grid Background="{Binding BackgroundColor}"></Grid>
-            </Border>
+        <Grid Grid.Column="1" Grid.ColumnSpan="2" Width="200"   Height="100">
+            <StackPanel> 
+                <Border BorderBrush="Black" BorderThickness="1" Height="60">
+                    <Grid Background="{Binding BackgroundColor}"></Grid>
+                </Border>
+                <TextBlock Text="Wating for next input" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding IsKMod, Converter={StaticResource BoolToVisibilityConverter}}"></TextBlock>
+
+            </StackPanel>
         </Grid>
         <Button Style="{StaticResource RC.SuccessButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="0" Content="Ctrl+C" Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Success"></Button>
         <Button Style="{StaticResource RC.PassButtonStyle}" Margin="20"  Grid.Row="1" Grid.Column="1" Content="Ctrl+V" Command="{Binding SetColorCommand}" CommandParameter="{Binding Path=Tag, RelativeSource={RelativeSource Self}}" Tag="Pass"></Button>
