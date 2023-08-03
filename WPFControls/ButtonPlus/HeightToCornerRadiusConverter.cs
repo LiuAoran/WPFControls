@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace ButtonPlus
 {
-    class HeightToCornerRadiusConv2erter : IValueConverter
+    class HeightToCornerRadiusConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
