@@ -74,11 +74,11 @@ namespace Shortcut
 
         private void OnKeyPressed(object sender, KeyPressedEventArgs e)
         {
-            if (IsKMod)
+            if (IsKMod &&(e.KeyPressed != Key.A && e.KeyPressed != Key.B && e.KeyPressed != Key.C && e.KeyPressed != Key.V))
             {
                 IsKMod = !IsKMod;
-                keyboardHook.KeyPressed -= OnKeyPressed;
-            } 
+            }
+            keyboardHook.KeyPressed -= OnKeyPressed; 
         }
     }
 }

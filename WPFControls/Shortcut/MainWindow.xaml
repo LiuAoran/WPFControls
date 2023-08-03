@@ -31,7 +31,7 @@
         <KeyBinding Key="F4" Modifiers="Ctrl" Command="{Binding SetColorCommand}" CommandParameter="Joy"></KeyBinding>
         <KeyBinding Key="F4" Modifiers="Ctrl+Shift" Command="{Binding SetColorCommand}" CommandParameter="Warning"></KeyBinding>
         <KeyBinding Key="k" Modifiers="Ctrl" Command="{Binding KModCommand}"></KeyBinding>
-        <KeyBinding Key="V" Modifiers="Ctrl" Command="{Binding KModSetColorCommand}" CommandParameter="Unknow"></KeyBinding>
+        <KeyBinding Key="V" Command="{Binding KModSetColorCommand}" CommandParameter="Unknow"></KeyBinding>
         <KeyBinding Key="A" Command="{Binding KModSetColorCommand}" CommandParameter="Default"></KeyBinding>
         <KeyBinding Key="B" Command="{Binding KModSetColorCommand}" CommandParameter="Common"></KeyBinding>
         <KeyBinding Key="C" Command="{Binding KModSetColorCommand}" CommandParameter="Danger"></KeyBinding>
