@@ -9,8 +9,10 @@ using System.Windows.Data;
 
 namespace TitleBar.Converters
 {
+    [ValueConversion(typeof(WindowState), typeof(Thickness))]
     class WindowStateToThicknessConverter : IValueConverter
     {
+
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var ws = (WindowState)value;

@@ -13,15 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TitleBar", "TitleBar\TitleB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FloatWindow", "FloatWindow\FloatWindow.csproj", "{2FD0CF9C-E35C-48A2-8D61-7B21FA415522}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListViewPlus", "ListViewPlus\ListViewPlus.csproj", "{6EE27514-D379-496C-AF1A-040579440576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListPlus", "ListViewPlus\ListPlus.csproj", "{6EE27514-D379-496C-AF1A-040579440576}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeViewPlus", "TreeViewPlus\TreeViewPlus.csproj", "{9F0C8C35-26D5-41DA-9F5F-96D7CCF4FDAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreePlus", "TreeViewPlus\TreePlus.csproj", "{9F0C8C35-26D5-41DA-9F5F-96D7CCF4FDAA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateChange", "StateChange\StateChange.csproj", "{F5CFA82B-38A1-4546-8E6E-A6287C2180D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrayApp", "TrayApp\TrayApp.csproj", "{D9F6B123-4D21-49AF-B826-DC0EB627167A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextBoxPlus", "TextBoxPlus\TextBoxPlus.csproj", "{7114B0F8-CD14-415A-9B69-8C52B24367E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberBoxPlus", "TextBoxPlus\NumberBoxPlus.csproj", "{7114B0F8-CD14-415A-9B69-8C52B24367E1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboBoxPlus", "ComboBoxPlus\ComboBoxPlus.csproj", "{42B7027A-5526-4D22-8452-D7F15E50FA6F}"
 EndProject
@@ -43,7 +43,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MefExample.PluginTwo", "Mef
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MefExample.Core", "MefExample.Core\MefExample.Core.csproj", "{8FC9C76E-3D93-47FD-AF3E-552624B28CF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragablzExample", "DragablzExample\DragablzExample.csproj", "{42CE4834-A2AD-4829-84EB-60593D75DD1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragablzExample", "DragablzExample\DragablzExample.csproj", "{42CE4834-A2AD-4829-84EB-60593D75DD1D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordBoxPlus", "PasswordBox\PasswordBoxPlus.csproj", "{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ButtonPlus", "ButtonPlus\ButtonPlus.csproj", "{55454C18-2CA3-4B39-99BC-037A69F1C3A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Settings.Demo", "Settings.Demo\Settings.Demo.csproj", "{C5AD97D2-093C-4645-A746-2519C5FFF865}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shortcut", "Shortcut\Shortcut.csproj", "{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +139,22 @@ Global
 		{42CE4834-A2AD-4829-84EB-60593D75DD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42CE4834-A2AD-4829-84EB-60593D75DD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42CE4834-A2AD-4829-84EB-60593D75DD1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9310C4E3-9163-4E15-BC6E-327E3DEB0A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55454C18-2CA3-4B39-99BC-037A69F1C3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55454C18-2CA3-4B39-99BC-037A69F1C3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55454C18-2CA3-4B39-99BC-037A69F1C3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55454C18-2CA3-4B39-99BC-037A69F1C3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5AD97D2-093C-4645-A746-2519C5FFF865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AD97D2-093C-4645-A746-2519C5FFF865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AD97D2-093C-4645-A746-2519C5FFF865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AD97D2-093C-4645-A746-2519C5FFF865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

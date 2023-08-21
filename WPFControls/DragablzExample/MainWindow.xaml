@@ -8,18 +8,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <ResourceDictionary>
-            <DataTemplate DataType="{x:Type dragablz:HeaderedItemViewModel}">
-                <ContentControl Content="{Binding Content}" Margin="4" FontSize="14"></ContentControl>
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type local:HeaderWithCloseControlViewModel}">
-                <local:HeaderWithCloseControl></local:HeaderWithCloseControl>
-            </DataTemplate>
-        </ResourceDictionary>
+        <ControlTemplate x:Key="CloseBtn" TargetType="{x:Type ButtonBase}">
+            <Border BorderThickness="{TemplateBinding Border.BorderThickness}"
+                    BorderBrush="{TemplateBinding Border.BorderBrush}"
+                    Background="{TemplateBinding Border.Background}"
+                    Name="border" 
+                    SnapsToDevicePixels="True">
+                <Path Name="content" VerticalAlignment="Center" HorizontalAlignment="Center" Fill="#606060" Data="M 3,3 17,17 M 3,17 17,3"></Path>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="True">
+                    <Setter Property="Path.Fill" TargetName="content" Value="#666666"></Setter>
+                </Trigger>
+                <Trigger Property="UIElement.IsMouseOver" Value="True">
+                    <Setter Property="Path.Fill" TargetName="content" Value="#555555"></Setter>
+                </Trigger>
+                <Trigger Property="ButtonBase.IsPressed" Value="True">
+                    <Setter Property="Path.Fill" Value="#333333"></Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="AddButton" TargetType="{x:Type ButtonBase}">
+            <Border 
+                BorderThickness="{TemplateBinding Border.BorderThickness}"
+                BorderBrush="{TemplateBinding Border.BorderBrush}"
+                Background="{TemplateBinding Panel.Background}"
+                x:Name="border"
+                SnapsToDevicePixels="True">
+                <Path x:Name="content" VerticalAlignment="Center" HorizontalAlignment="Center" Fill="#FFFFFF" Data="M 2,8 16,8 M 8,2 8,16">
+                </Path>
+            </Border>
+        </ControlTemplate>
     </Window.Resources>
     <Grid>
-        <dragablz:TabablzControl>
-            
-        </dragablz:TabablzControl>
     </Grid>
 </Window>

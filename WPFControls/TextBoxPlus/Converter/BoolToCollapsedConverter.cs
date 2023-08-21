@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows;
 
-namespace TextBoxPlus.Converter
+namespace NumberBoxPlus.Converter
 {
     /// <summary>
     /// Value converter between bool and Visibility
