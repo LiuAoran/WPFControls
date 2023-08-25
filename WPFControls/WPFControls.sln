@@ -53,6 +53,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Settings.Demo", "Settings.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shortcut", "Shortcut\Shortcut.csproj", "{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioButtonPlus", "RadioButtonPlus\RadioButtonPlus.csproj", "{75D24B0A-B685-41A5-AEF9-E598D4B5221D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +157,10 @@ Global
 		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CF5374D-F83F-4EEC-ABE3-CDA301C382BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D24B0A-B685-41A5-AEF9-E598D4B5221D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D24B0A-B685-41A5-AEF9-E598D4B5221D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D24B0A-B685-41A5-AEF9-E598D4B5221D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D24B0A-B685-41A5-AEF9-E598D4B5221D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
