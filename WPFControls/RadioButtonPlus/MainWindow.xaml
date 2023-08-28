@@ -13,8 +13,12 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    <Grid>
-        <RadioButton Content="Option 1" Style="{StaticResource CustomRadioButtonStyle}"></RadioButton>
-
-    </Grid>
+    <StackPanel>
+        <local:TCIRadioButton Style="{StaticResource TCIRadioButtonStyle}" Title="Title1" Description="My little beautiful Pretty pretty banana. You are all that I'd like. And I want to share you, With all my friends, Family and loved one. I just open all your skin. Then I take a small bite." GroupName="Group1"  BorderBrush="Black" Margin="10" TextWidth="500" Height="200">
+            <Grid Background="Aqua">
+                <TextBlock Text="Icon1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+            </Grid>
+        </local:TCIRadioButton>
+        <local:TCIRadioButton Style="{StaticResource TCIRadioButtonStyle}" Title="Title2" Description="This is descryption" GroupName="Group1" BorderBrush="Black" Margin="10" TextWidth="200"></local:TCIRadioButton>
+    </StackPanel>
 </Window>
