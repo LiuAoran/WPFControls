@@ -10,5 +10,11 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="TabControlStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TabItemStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>
