@@ -31,7 +31,7 @@
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <!-- 这里是 ContentPresenter -->
-                                <Grid x:Name="PART_IconGrid" Width="80" Margin="0,0,10,0">
+                                <Grid x:Name="PART_IconGrid" Width="{Binding}" Margin="0,0,10,0">
                                     <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                 </Grid>
 
