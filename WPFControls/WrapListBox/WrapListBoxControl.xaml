@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="WrapListBox.WrapListBoxControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WrapListBox"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="360" >
+
+    <UserControl.Resources>
+        <Style TargetType="ListBox" x:Key="WrapListBoxStyle">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+
+        <Style x:Key="ItemGridStyle" TargetType="Grid">
+            <Setter Property="Width" Value="200" />
+            <Setter Property="Height" Value="100" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        
+        <Style x:Key="ItemBorderStyle" TargetType="Border">
+            <Setter Property="Background" Value="#70DDDDDD" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="Background" Value="#DDDDDD" />
+                </Trigger> 
+            </Style.Triggers>
+        </Style> 
+    </UserControl.Resources>
+
+    <Grid>
+        <ListBox  x:Name="WrapListBox" Style="{StaticResource WrapListBoxStyle}" ItemsSource="{Binding Items}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  SelectionMode="Single">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Margin" Value="10" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <ContentPresenter />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Width="{Binding ElementName=WrapListBox, Path=ActualWidth}"></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                    <Border  Width="200" Height="100" Style="{StaticResource ItemBorderStyle}">
+                        <Grid Style="{StaticResource ItemGridStyle}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Margin="20,0,0,0"  FontSize="32"   Foreground="#1a1a1a"  Text="{Binding TitleText}"/>
+                            <TextBlock Grid.Row="1" Margin="20,0,0,0"  FontSize="16" Foreground="#666666"  Text="{Binding DescriptionText}" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
+                        </Grid>
+                    </Border> 
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox> 
+   </Grid>
+</UserControl>
