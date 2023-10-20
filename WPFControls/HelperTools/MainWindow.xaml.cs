@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RadioButtonPlus
+namespace HelperTools
 {
     /// <summary>
-    /// TCIRadioButtonControl.xaml 的交互逻辑
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class TCIRadioButtonControl : RadioButton
+    public partial class MainWindow : Window
     {
-        public TCIRadioButtonControl()
+        public MainWindow()
         {
             InitializeComponent();
         }

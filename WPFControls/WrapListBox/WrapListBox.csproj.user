@@ -7,10 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="WrapListBoxControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="RadioButtonStyle.xaml">
+    <Page Update="WrapListBoxControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

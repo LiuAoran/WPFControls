@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:TabControl"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--Colors-->
+        <SolidColorBrush x:Key="PrimaryBlueColor" Color="#348EF6"></SolidColorBrush>
+        <SolidColorBrush x:Key="SecundaryBlueColor" Color="#EFF2FF"></SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryTextColor" Color="#FFFFFF"></SolidColorBrush>
+        <SolidColorBrush x:Key="SecundaryTextColor" Color="#BBC1D1"></SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryGrayColor" Color="#BBC1D1"></SolidColorBrush>
     </Application.Resources>
 </Application>
