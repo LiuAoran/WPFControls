@@ -58,6 +58,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "List", "List", "{FFCDDDF4-2660-4FFA-B398-9825C32AAA9A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrapListBox", "WrapListBox\WrapListBox.csproj", "{27AD79B9-A3FD-4895-A8DC-5AE7BF67CBD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingControl", "LoadingControl\LoadingControl.csproj", "{F2831FF4-EDF0-4D31-8AA3-5001726EBB69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -169,6 +170,10 @@ Global
 		{27AD79B9-A3FD-4895-A8DC-5AE7BF67CBD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27AD79B9-A3FD-4895-A8DC-5AE7BF67CBD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27AD79B9-A3FD-4895-A8DC-5AE7BF67CBD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2831FF4-EDF0-4D31-8AA3-5001726EBB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2831FF4-EDF0-4D31-8AA3-5001726EBB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2831FF4-EDF0-4D31-8AA3-5001726EBB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2831FF4-EDF0-4D31-8AA3-5001726EBB69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
