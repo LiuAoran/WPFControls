@@ -6,13 +6,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace DragablzExample
+namespace DragWrapListBox
 {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
-        public static List<string> OpenedPageList = new List<string>();
     }
 }
