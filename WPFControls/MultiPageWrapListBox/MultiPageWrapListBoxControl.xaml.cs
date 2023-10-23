@@ -70,7 +70,6 @@ namespace MultiPageWrapListBox
                 if (UpdateProper(ref _verticalItemNumber, value))
                 {
                     ResetTotalIndex();
-
                 }
             }
         }

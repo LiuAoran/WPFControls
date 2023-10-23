@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:converter="clr-namespace:ButtonPlus">
     <converter:HeightToCornerRadiusConverter x:Key="HeightToCornerRadiusConverter"></converter:HeightToCornerRadiusConverter>
-    <Style x:Key="RoundCornerButtonBaseStyle" TargetType="Button">
+        <Style x:Key="RoundCornerButtonBaseStyle" TargetType="Button">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="FontWeight" Value="Regular" />
         <Setter Property="BorderThickness" Value="0" />
@@ -222,7 +222,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    
     <Style x:Key="RC.JoyButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundCornerButtonBaseStyle}">
         <Setter Property="Template">
             <Setter.Value>
