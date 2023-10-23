@@ -23,6 +23,11 @@ namespace SettingsListView
         public SettingsListViewControl()
         {
             InitializeComponent();
+            this.DataContext = FileHistoryManager<FileInfo>.Instance; 
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,37 @@ namespace SettingsListView
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void AddFileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FileInfo fileInfo = new FileInfo();
+            fileInfo.FilePath =  HelperTools.FileHelper.GetFilePathOrEmpty(HelperTools.FileDialogType.Open);
+            fileInfo.FileSize = HelperTools.FileHelper.GetFileSize(fileInfo.FilePath);
+            fileInfo.OpenDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            FileHistoryManager<FileInfo>.Instance.AddToHistory(fileInfo);
+            FileHistoryManager<FileInfo>.Instance.SaveHistory();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            FileHistoryManager<FileInfo>.Instance.LoadHistory();
+        }
+
+        private void Window_Unloaded(object sender, RoutedEventArgs e)
+        {
+            FileHistoryManager<FileInfo>.Instance.SaveHistory();
+        }
+
+        private void ClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FileHistoryManager<FileInfo>.Instance.ClearHistory();
+            FileHistoryManager<FileInfo>.Instance.SaveHistory();
         }
     }
 }
