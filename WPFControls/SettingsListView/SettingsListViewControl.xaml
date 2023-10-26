@@ -21,7 +21,6 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding FilePath}"  Margin="0,0,20,0"/>
                         <TextBlock Text="{Binding FileSize}" />
-                        <!-- 添加其他属性 -->
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

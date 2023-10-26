@@ -24,7 +24,6 @@ namespace SettingsListView
         public string OpenDate { get; set; } = string.Empty;
     }
 
-    [Serializable]
     public class FileHistoryManager<T> : INotifyPropertyChanged where T : class, IHasFilePath
     {
         private ObservableCollection<T> _history;
@@ -42,6 +41,7 @@ namespace SettingsListView
         public int DefaultHistoryCount { get; private set; } = int.MaxValue;
         public string DefaultFilePath { get; private set; } = string.Empty;
 
+        private static FileHistoryManager<T>? instance;
         public static FileHistoryManager<T> Instance
         {
             get
@@ -53,8 +53,6 @@ namespace SettingsListView
                 return instance;
             }
         }
-
-        private static FileHistoryManager<T>? instance;
 
         private FileHistoryManager()
         {
@@ -74,7 +72,7 @@ namespace SettingsListView
             }
             History.Insert(0, item);
 
-            if (History.Count > 10)
+            if (History.Count > DefaultHistoryCount)
             {
                 History.RemoveAt(History.Count - 1);
             }
