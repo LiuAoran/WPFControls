@@ -133,11 +133,6 @@ namespace ImageDisplayer
 
                 double newVerticalOffset = startVerticalOffset + deltaVerticalOffset/1.5 ;
                 double newHorizontalOffset = startHorizontalOffset + deltaHorizontalOffset/1.5;
-                Debug.WriteLine("--------------");
-                Debug.WriteLine($"deltaVerticalOffset: {deltaVerticalOffset}, deltaHorizontalOffset: {deltaHorizontalOffset}");
-
-                Debug.WriteLine($"newVerticalOffset: {newVerticalOffset}, newHorizontalOffset: {newHorizontalOffset}");
-                Debug.WriteLine("--------------");
 
                 ImageSv.ScrollToVerticalOffset(newVerticalOffset );
                 ImageSv.ScrollToHorizontalOffset(newHorizontalOffset);
