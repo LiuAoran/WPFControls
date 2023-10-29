@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="ImageDisplayer.ImageDisplayerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ImageDisplayer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid  x:Name="ImageGd" Background="#1A000000" ClipToBounds="True">
+        <ScrollViewer Name="ImageSv" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Image x:Name="Image" Source="{Binding ImageSource}" Stretch="Uniform" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseLeftButtonUp="Image_MouseLeftButtonUp" MouseMove="Image_MouseMove"> 
+                <Image.LayoutTransform>
+                    <ScaleTransform ScaleX="{Binding Scale}" ScaleY="{Binding Scale}"/>
+                </Image.LayoutTransform>
+            </Image>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

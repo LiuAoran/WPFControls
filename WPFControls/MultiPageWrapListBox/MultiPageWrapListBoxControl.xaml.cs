@@ -24,7 +24,6 @@ namespace MultiPageWrapListBox
     public partial class MultiPageWrapListBoxControl : UserControl, INotifyPropertyChanged
     {
         public event EventHandler<CustomItem> SelectionChanged;
-        public event PropertyChangedEventHandler? PropertyChanged;
 
         private int _currentIndex = 1;
         public int CurrentIndex
@@ -162,6 +161,8 @@ namespace MultiPageWrapListBox
                 PageItems.Add(Items[ItemIndex]);
             }
         }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         protected bool UpdateProper<T>(ref T properValue,
                             T newValue,
