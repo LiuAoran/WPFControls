@@ -10,15 +10,29 @@
         <ResourceDictionary Source="ButtonStyle.xaml"></ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <StackPanel>
-            <Button Style="{StaticResource RC.SuccessButtonStyle}" Height="32" Width="100" Content="Success" Margin="10"></Button>
-            <Button Style="{StaticResource RC.PassButtonStyle}" Height="32" Width="100" Content="Pass" Margin="10"></Button>
-            <Button Style="{StaticResource RC.WarningButtonStyle}" Height="32" Width="100" Content="Warning" Margin="10"></Button>
-            <Button Style="{StaticResource RC.JoyButtonStyle}" Height="32" Width="100" Content="Joy" Margin="10"></Button>
-            <Button Style="{StaticResource RC.DangerButtonStyle}" Height="32" Width="100" Content="Danger" Margin="10"></Button>
-            <Button Style="{StaticResource RC.CommonButtonStyle}" Height="32" Width="100" Content="Common" Margin="10"></Button>
-            <Button Style="{StaticResource RC.UnknowButtonStyle}" Height="32" Width="100" Content="Unknow" Margin="10"></Button>
-            <Button Style="{StaticResource RC.DefaultButtonStyle}" Height="32" Width="100" Content="Default" Margin="10"></Button>
-        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <Button Style="{StaticResource RC.SuccessButtonStyle}" Height="32" Width="100" Content="Success" Margin="10"></Button>
+                <Button Style="{StaticResource RC.PassButtonStyle}" Height="32" Width="100" Content="Pass" Margin="10"></Button>
+                <Button Style="{StaticResource RC.WarningButtonStyle}" Height="32" Width="100" Content="Warning" Margin="10"></Button>
+                <Button Style="{StaticResource RC.JoyButtonStyle}" Height="32" Width="100" Content="Joy" Margin="10"></Button>
+                <Button Style="{StaticResource RC.DangerButtonStyle}" Height="32" Width="100" Content="Danger" Margin="10"></Button>
+                <Button Style="{StaticResource RC.CommonButtonStyle}" Height="32" Width="100" Content="Common" Margin="10"></Button>
+                <Button Style="{StaticResource RC.UnknowButtonStyle}" Height="32" Width="100" Content="Unknow" Margin="10"></Button>
+                <Button Style="{StaticResource RC.DefaultButtonStyle}" Height="32" Width="100" Content="Default" Margin="10"></Button>
+            </StackPanel>
+
+            <Grid Grid.Column="2">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                    <Button Style="{StaticResource RC.SuccessButtonStyle}" Height="50" Width="200" Content="Success" Margin="10"></Button>
+                    <Button Style="{StaticResource RC.UnknowButtonStyle}" Height="50" Width="100" Content="Success" Margin="10"></Button>
+                    
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
