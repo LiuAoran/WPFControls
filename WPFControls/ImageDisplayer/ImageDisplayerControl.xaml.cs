@@ -49,13 +49,6 @@ namespace ImageDisplayer
             get => _scale;
             set
             {
-                if (Image.ActualHeight * value < ImageGd.ActualHeight ||
-                    Image.ActualWidth * value < ImageGd.ActualWidth)
-                { 
-                    value = Math.Min(ImageGd.ActualHeight / Image.ActualHeight,
-                                     ImageGd.ActualWidth / Image.ActualWidth);
-                }
-
                 UpdateProper(ref _scale, Math.Min((Math.Max(value, 0.1)), 10));
             }
         }
@@ -128,13 +121,13 @@ namespace ImageDisplayer
             if (ImageSv.Visibility == Visibility.Visible && Image.IsMouseCaptured)
             {
                 Point currentMousePosition = e.GetPosition(Image);
-                double deltaVerticalOffset = lastMousePosition.Y - currentMousePosition.Y ;
+                double deltaVerticalOffset = lastMousePosition.Y - currentMousePosition.Y;
                 double deltaHorizontalOffset = lastMousePosition.X - currentMousePosition.X;
 
-                double newVerticalOffset = startVerticalOffset + deltaVerticalOffset/1.5 ;
-                double newHorizontalOffset = startHorizontalOffset + deltaHorizontalOffset/1.5;
+                double newVerticalOffset = startVerticalOffset + deltaVerticalOffset;
+                double newHorizontalOffset = startHorizontalOffset + deltaHorizontalOffset;
 
-                ImageSv.ScrollToVerticalOffset(newVerticalOffset );
+                ImageSv.ScrollToVerticalOffset(newVerticalOffset);
                 ImageSv.ScrollToHorizontalOffset(newHorizontalOffset);
             }
         }

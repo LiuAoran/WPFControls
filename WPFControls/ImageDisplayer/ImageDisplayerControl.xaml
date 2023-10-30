@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid  x:Name="ImageGd" Background="#1A000000" ClipToBounds="True">
         <ScrollViewer Name="ImageSv" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <Image x:Name="Image" Source="{Binding ImageSource}" Stretch="Uniform" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseLeftButtonUp="Image_MouseLeftButtonUp" MouseMove="Image_MouseMove"> 
+            <Image x:Name="Image" Source="{Binding ImageSource}" Stretch="None" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseLeftButtonUp="Image_MouseLeftButtonUp" MouseMove="Image_MouseMove"> 
                 <Image.LayoutTransform>
                     <ScaleTransform ScaleX="{Binding Scale}" ScaleY="{Binding Scale}"/>
                 </Image.LayoutTransform>
