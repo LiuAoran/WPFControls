@@ -75,11 +75,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListSettings", "ListSetting
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RountedEvent", "RountedEvent", "{6DB7999D-5CFF-4DA9-9B17-6A7795C7FE66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RountedEventExample", "RountedEventExample\RountedEventExample.csproj", "{B36722C6-AFFA-407B-B550-FC5E6BF369ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RountedEventExample", "RountedEventExample\RountedEventExample.csproj", "{B36722C6-AFFA-407B-B550-FC5E6BF369ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImageProcessor", "ImageProcessor", "{2B19F1B9-77F4-4C89-AC3E-0B68B9D58548}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDisplayer", "ImageDisplayer\ImageDisplayer.csproj", "{F49AB2DA-FBE5-400C-8FDC-E7C454FA9CDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageDisplayer", "ImageDisplayer\ImageDisplayer.csproj", "{F49AB2DA-FBE5-400C-8FDC-E7C454FA9CDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleButtonPlus", "ToggleButtonPlus\ToggleButtonPlus.csproj", "{60B3ED46-A91E-4C9B-BC90-04C74783786D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -223,6 +225,10 @@ Global
 		{F49AB2DA-FBE5-400C-8FDC-E7C454FA9CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F49AB2DA-FBE5-400C-8FDC-E7C454FA9CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F49AB2DA-FBE5-400C-8FDC-E7C454FA9CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60B3ED46-A91E-4C9B-BC90-04C74783786D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60B3ED46-A91E-4C9B-BC90-04C74783786D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60B3ED46-A91E-4C9B-BC90-04C74783786D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60B3ED46-A91E-4C9B-BC90-04C74783786D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
