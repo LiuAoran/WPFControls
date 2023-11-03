@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TitleBar", "TitleBar\TitleB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FloatWindow", "FloatWindow\FloatWindow.csproj", "{2FD0CF9C-E35C-48A2-8D61-7B21FA415522}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListPlus", "ListViewPlus\ListPlus.csproj", "{6EE27514-D379-496C-AF1A-040579440576}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreePlus", "TreeViewPlus\TreePlus.csproj", "{9F0C8C35-26D5-41DA-9F5F-96D7CCF4FDAA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StateChange", "StateChange\StateChange.csproj", "{F5CFA82B-38A1-4546-8E6E-A6287C2180D9}"
@@ -81,7 +79,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImageProcessor", "ImageProc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageDisplayer", "ImageDisplayer\ImageDisplayer.csproj", "{F49AB2DA-FBE5-400C-8FDC-E7C454FA9CDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleButtonPlus", "ToggleButtonPlus\ToggleButtonPlus.csproj", "{60B3ED46-A91E-4C9B-BC90-04C74783786D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToggleButtonPlus", "ToggleButtonPlus\ToggleButtonPlus.csproj", "{60B3ED46-A91E-4C9B-BC90-04C74783786D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBoxPlus", "ComboBoxPlus\ComboBoxPlus.csproj", "{8F293AF1-336D-4085-8B95-220083AF2EFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,10 +109,6 @@ Global
 		{2FD0CF9C-E35C-48A2-8D61-7B21FA415522}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FD0CF9C-E35C-48A2-8D61-7B21FA415522}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FD0CF9C-E35C-48A2-8D61-7B21FA415522}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6EE27514-D379-496C-AF1A-040579440576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6EE27514-D379-496C-AF1A-040579440576}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6EE27514-D379-496C-AF1A-040579440576}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6EE27514-D379-496C-AF1A-040579440576}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F0C8C35-26D5-41DA-9F5F-96D7CCF4FDAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F0C8C35-26D5-41DA-9F5F-96D7CCF4FDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F0C8C35-26D5-41DA-9F5F-96D7CCF4FDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -229,6 +225,10 @@ Global
 		{60B3ED46-A91E-4C9B-BC90-04C74783786D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60B3ED46-A91E-4C9B-BC90-04C74783786D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60B3ED46-A91E-4C9B-BC90-04C74783786D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F293AF1-336D-4085-8B95-220083AF2EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F293AF1-336D-4085-8B95-220083AF2EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F293AF1-336D-4085-8B95-220083AF2EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F293AF1-336D-4085-8B95-220083AF2EFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

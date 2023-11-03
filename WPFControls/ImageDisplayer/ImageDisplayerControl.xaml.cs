@@ -102,7 +102,7 @@ namespace ImageDisplayer
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            lastMousePosition = e.GetPosition(Image);
+            lastMousePosition = e.GetPosition(ImageSv);
             startVerticalOffset = ImageSv.VerticalOffset;
             startHorizontalOffset = ImageSv.HorizontalOffset;
             Image.CaptureMouse();
@@ -113,14 +113,13 @@ namespace ImageDisplayer
         {
             Image.ReleaseMouseCapture();
             this.Cursor = Cursors.Arrow;
-
         }
 
         private void Image_MouseMove(object sender, MouseEventArgs e)
         {
             if (ImageSv.Visibility == Visibility.Visible && Image.IsMouseCaptured)
             {
-                Point currentMousePosition = e.GetPosition(Image);
+                Point currentMousePosition = e.GetPosition(ImageSv);
                 double deltaVerticalOffset = lastMousePosition.Y - currentMousePosition.Y;
                 double deltaHorizontalOffset = lastMousePosition.X - currentMousePosition.X;
 
