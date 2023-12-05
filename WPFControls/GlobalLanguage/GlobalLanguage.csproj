@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <LangVersion>8</LangVersion>
+        <TargetFramework>net461</TargetFramework>
+    </PropertyGroup>
+
+
+
+    <ItemGroup>
+      <Compile Remove="lang\DefaultLanguage.cs" />
+      <Compile Update="Strings\MainWindow.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>MainWindow.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+
+
+    <ItemGroup>
+      <EmbeddedResource Update="Strings\MainWindow.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>MainWindow.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Strings\MainWindow.zh.resx">
+        <DependentUpon>MainWindow.resx</DependentUpon>
+      </EmbeddedResource>
+    </ItemGroup>
+
+
+</Project>

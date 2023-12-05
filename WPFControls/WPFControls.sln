@@ -81,7 +81,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageDisplayer", "ImageDisp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToggleButtonPlus", "ToggleButtonPlus\ToggleButtonPlus.csproj", "{60B3ED46-A91E-4C9B-BC90-04C74783786D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBoxPlus", "ComboBoxPlus\ComboBoxPlus.csproj", "{8F293AF1-336D-4085-8B95-220083AF2EFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboBoxPlus", "ComboBoxPlus\ComboBoxPlus.csproj", "{8F293AF1-336D-4085-8B95-220083AF2EFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalLanguage", "GlobalLanguage\GlobalLanguage.csproj", "{7EDC4F40-D223-48E0-87A9-DA0AA728DF6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -229,6 +231,10 @@ Global
 		{8F293AF1-336D-4085-8B95-220083AF2EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F293AF1-336D-4085-8B95-220083AF2EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F293AF1-336D-4085-8B95-220083AF2EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDC4F40-D223-48E0-87A9-DA0AA728DF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDC4F40-D223-48E0-87A9-DA0AA728DF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDC4F40-D223-48E0-87A9-DA0AA728DF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDC4F40-D223-48E0-87A9-DA0AA728DF6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
