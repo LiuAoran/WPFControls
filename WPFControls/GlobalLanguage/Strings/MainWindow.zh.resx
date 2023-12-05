@@ -1,0 +1,26 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Caption_Warn" xml:space="preserve">
+        <value>警告</value>
+    </data>
+    <data name="Cmb_Language" xml:space="preserve">
+        <value>语言</value>
+    </data>
+    <data name="Tip_Restart" xml:space="preserve">
+        <value>重启程序以应用语言更改。</value>
+    </data>
+    <data name="Txt_Example" xml:space="preserve">
+        <value>世界，你好！</value>
+    </data>
+</root>
