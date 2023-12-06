@@ -25,7 +25,7 @@ namespace GlobalLanguage
         public MainWindow()
         {
             InitializeComponent();
-            SelectCurrentLanguage();
+            LanguageCmbSelectCurrentLanguage();
         }
         
         private void LanguageCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -48,11 +48,11 @@ namespace GlobalLanguage
             }
             else
             {
-                SelectCurrentLanguage();
+                LanguageCmbSelectCurrentLanguage();
             }
         }
         
-        private void SelectCurrentLanguage()
+        private void LanguageCmbSelectCurrentLanguage()
         {
             foreach (ComboBoxItem item in LanguageCmb.Items)
             {
