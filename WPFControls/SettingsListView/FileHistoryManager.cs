@@ -24,11 +24,11 @@ namespace SettingsListView
         public string OpenDate { get; set; } = string.Empty;
     }
 
-    public class FileHistoryManager<T> : INotifyPropertyChanged where T : class, IHasFilePath
+    public class FileHistoryManager<THistory> : INotifyPropertyChanged where THistory : class, IHasFilePath
     {
-        private ObservableCollection<T> _history;
+        private ObservableCollection<THistory>? _history;
 
-        public ObservableCollection<T> History
+        public ObservableCollection<THistory>? History
         {
             get => _history;
             set
@@ -41,40 +41,39 @@ namespace SettingsListView
         public int DefaultHistoryCount { get; private set; } = int.MaxValue;
         public string DefaultFilePath { get; private set; } = string.Empty;
 
-        private static FileHistoryManager<T>? instance;
-        public static FileHistoryManager<T> Instance
+        private static FileHistoryManager<THistory>? _instance;
+        public static FileHistoryManager<THistory> Instance
         {
             get
             {
-                if (instance == null)
+                if (_instance == null)
                 {
-                    instance = new FileHistoryManager<T>();
+                    _instance = new FileHistoryManager<THistory>();
                 }
-                return instance;
+                return _instance;
             }
         }
 
         private FileHistoryManager()
         {
-            History = new ObservableCollection<T>();
+            History = new ObservableCollection<THistory>();
             DefaultFilePath = "History.xml";
             DefaultHistoryCount = 10;
         }
 
-
-        public void AddToHistory(T item)
+        public void AddToHistory(THistory item)
         {
-            T existingItem = History.FirstOrDefault(i => i.FilePath == item.FilePath);
+            THistory? existingItem = History?.FirstOrDefault(i => i.FilePath == item.FilePath);
 
             if (existingItem != null)
             {
-                History.Remove(existingItem);
+                History?.Remove(existingItem);
             }
-            History.Insert(0, item);
+            History?.Insert(0, item);
 
-            if (History.Count > DefaultHistoryCount)
+            if (History?.Count > DefaultHistoryCount)
             {
-                History.RemoveAt(History.Count - 1);
+                History?.RemoveAt(History.Count - 1);
             }
         }
 
@@ -89,11 +88,11 @@ namespace SettingsListView
             {
                 using (FileStream fs = new FileStream(filePath, FileMode.Create))
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<T>));
+                    XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<THistory>));
                     serializer.Serialize(fs, History);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 ClearHistory();
                 if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
@@ -114,11 +113,15 @@ namespace SettingsListView
             {
                 using (FileStream fs = new FileStream(filePath, FileMode.Open))
                 {
-                    XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<T>));
-                    History = (ObservableCollection<T>)serializer.Deserialize(fs);
+                    XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<THistory>));
+                    object? obj = serializer.Deserialize(fs);
+                    if (obj != null)
+                    {
+                        History = (ObservableCollection<THistory>)obj;
+                    }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 ClearHistory();
                 if (!string.IsNullOrEmpty(filePath) && File.Exists(filePath))
@@ -130,7 +133,7 @@ namespace SettingsListView
 
         public void ClearHistory()
         {
-            History.Clear();
+            History?.Clear();
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
