@@ -6,9 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelperTools.Helper
-{
-    public static class FilePathHelper
+namespace HelperTools
+{ 
+    public enum FileDialogType
+    {
+        Open,
+        Save
+    }
+
+    public static class FileHelper
     {
         /// <summary>
         /// Returns the file size based on the specified file path, with the smallest unit being bytes (B).
@@ -40,13 +46,7 @@ namespace HelperTools.Helper
         }
 
 
-        public enum FileDialogType
-        {
-            Open,
-            Save
-        }
-
-        public static string GetFilePathOrEmpty(FileDialogType dialogType, string filter)
+        public static string GetFilePathOrEmpty(FileDialogType dialogType, string filter = "")
         {
             string selectedFilePath = string.Empty;
             FileDialog fileDialog = dialogType switch

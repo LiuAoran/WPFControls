@@ -7,10 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="ComboboxStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\ComboBoxStyle.xaml">
+    <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

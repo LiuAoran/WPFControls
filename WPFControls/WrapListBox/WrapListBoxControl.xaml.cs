@@ -21,10 +21,8 @@ namespace WrapListBox
     /// <summary>
     /// WrapListBoxControl.xaml 的交互逻辑
     /// </summary>
-    public partial class WrapListBoxControl : UserControl, INotifyPropertyChanged
+    public partial class WrapListBoxControl : UserControl
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
-
         public event EventHandler<CustomItem> SelectionChanged;
 
         public static readonly DependencyProperty ItemsProperty =
@@ -41,7 +39,6 @@ namespace WrapListBox
             this.DataContext = this;
             InitializeComponent();
             Items = new ObservableCollection<CustomItem>();
-            WrapListBox.SelectionChanged += WrapListBox_SelectionChanged;
         }
 
         private void WrapListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -53,20 +50,14 @@ namespace WrapListBox
             } 
         }
 
-        protected void UpdateProper<T>(ref T properValue,
-                    T newValue,
-                    [CallerMemberName] string properName = "")
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            if (object.Equals(properValue, newValue))
-                return;
-
-            properValue = newValue;
-            OnPropertyChanged(properName);
-
+            WrapListBox.SelectionChanged += WrapListBox_SelectionChanged;
         }
-        protected void OnPropertyChanged(string propertyName)
+
+        private void UserControl_Unloaded(object sender, RoutedEventArgs e)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            WrapListBox.SelectionChanged -= WrapListBox_SelectionChanged;
         }
     }
 

@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <local:WrapListBoxControl x:Name="WrapListBoxControl" HorizontalAlignment="Center"></local:WrapListBoxControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="92*"/>
+        </Grid.RowDefinitions>
+        <local:WrapListBoxControl x:Name="WrapListBoxControl" HorizontalAlignment="Center" Grid.RowSpan="2"></local:WrapListBoxControl>
     </Grid>
 </Window>

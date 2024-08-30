@@ -2,7 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:RadioButtonPlus">
     <Style x:Key="TCIRadioButtonStyle" TargetType="RadioButton">
-        <Setter Property="Background" Value="Red"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:TCIRadioButton}">
@@ -11,7 +10,7 @@
                             <ColumnDefinition Width="40"></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Grid Grid.RowSpan="2">
+                        <Grid>
                             <Ellipse x:Name="RadioEllipse"
                                          Width="20"
                                          Height="20"
@@ -30,7 +29,6 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <!-- 这里是 ContentPresenter -->
                                 <Grid x:Name="PART_IconGrid" Width="{Binding}" Margin="0,0,10,0">
                                     <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                 </Grid>
