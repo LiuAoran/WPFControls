@@ -47,6 +47,8 @@
         <ListBox  x:Name="MultiPageWrapListBox" Style="{StaticResource WrapListBoxStyle}" ItemsSource="{Binding PageItems}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  SelectionMode="Single" d:ItemsSource="{d:SampleData ItemCount=10}">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
                     <Setter Property="Margin" Value="{Binding ItemMargin}" />
                     <Setter Property="Template">
                         <Setter.Value>
